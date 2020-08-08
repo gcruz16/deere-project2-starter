@@ -4,13 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 2 Homepage</title>
+    <link rel="stylesheet" href="css/appIndex.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" >
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Welcome to Project 2</h1>
-    <nav>
-      <a href="/auth/signup">Sign Up</a></br>
-      <a href="/auth/login">Log In</a></br>
-      <a href="/auth/logout">Log Out</a></br>
-    </nav>
+    <div class="header">
+        <h1>Baking Time</h1>
+        <img src="/img/bakingTime11.png" alt="" id="bakingTimeImg">
+    </div>
+    <section class="submenu">
+      <nav class="submenu1">
+        <a href="/auth/signup">Home Page</a></br>
+      </nav>
+      <nav class="account">
+        <a href="/auth/signup">Sign Up</a></br>
+        <a href="/auth/login">Log In</a></br>
+        <a href="/auth/logout">Log Out</a></br>
+      </nav>
+    </section>
+    <section class="mainSection">
+          <div class ="allRecipes" overflow ="scroll">
+            <div id="newRecipe" >
+              <a href="/recipes/new"><img src="/icon/cupCakeIcon.svg" class="icon" />New Recipe</a>
+            </div>
+            
+              <ul>
+                <% for(let i = 0; i < recipes.length; i++){ %>
+
+                <li class="recipes-items">
+                  <img src="<%= recipes[i].img%>" alt="" id="imgRecipe" class="cakeImg" />
+                  <a href="/recipes/<%=recipes[i].id%>"> <%=recipes[i].name_recipe%> </a>
+              
+                  <form action="/recipes/<%=recipes[i].id; %>?_method=DELETE" method="POST">
+                     <input type="image" src="/icon/removeIcon.jpeg" class="icon"/> 
+                  </form>
+                  <a href="/recipes/<%=recipes[i].id; %>/edit" src="/icon/editIcon.png">
+                       <img src="/icon/editIcon.png" alt="" href="/recipes/<%=recipes[i].id; %>/edit" class="icon">
+                  </a></br></br>
+                  <div class="recipeInfo"><label for="Preparation Time">Preparation Time: </label><%=recipes[i].preparation_time%> min</div>
+                  <div class="recipeInfo"><label for="Cooking Time">Cooking Time: </label><%=recipes[i].cooking_time%> min</div>
+                  <div class="recipeInfo"><label for="Difficulty">Difficulty: </label><%=recipes[i].difficulty%></div>
+                  
+                </li>
+                <% } %>
+              </ul>
+            </div>
+          <div id ="main">
+            <div class="imgC">
+                <img src="img/bakingTime3.jpg" alt="" id="mainImg">
+                <img src="img/bakingTime2.jpeg" alt="" id="subImg">
+            </div>
+           </div>
+
+    </section>
+    <div class="footer">
+       Gladys Cruz
+    </div>
   </body>
 </html>

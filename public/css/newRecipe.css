@@ -1,0 +1,57 @@
+body {
+	display: flex;
+	flex-flow: row wrap;
+	background-color: lightcyan;
+	color: #fcd1c6;
+	font-family: "Luckiest Guy";
+	font-size: 20px;
+	flex-flow: row wrap;
+}
+
+img {
+	background: none;
+	height: 250px;
+	width: 250px;
+}
+#heading {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	font-size: 45px;
+	padding: 50px;
+	margin: 30px;
+	background-color: #fcd1c6;
+	color: #009f9f;
+}
+#formNew {
+	display: flex;
+	background-color: #fcd1c6;
+	color: #009f9f;
+	width: 100%;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 30px;
+}
+input {
+	height: 20px;
+	width: 400px;
+	font-family: "Nova Cut";
+	font-size: 20px;
+}
+select {
+	font-family: "Nova Cut";
+	font-size: 20px;
+}
+.smallInput {
+	width: 70px;
+}
+.button {
+	width: 150px;
+	justify-content: center;
+	background-color: #009f9f;
+	height: 35px;
+	border-radius: 65px/55px;
+	font-size: 16px;
+	font-family: "Luckiest Guy";
+}

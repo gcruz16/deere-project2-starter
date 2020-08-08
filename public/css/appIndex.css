@@ -1,0 +1,175 @@
+body {
+	display: flex;
+	flex-flow: row wrap;
+	background-color: lightcyan;
+	font-family: "Luckiest Guy";
+	font-size: 20px;
+}
+a {
+	text-decoration: none;
+	color: #005f5f;
+	font-family: "Sniglet";
+}
+.header {
+	/* border: 3px solid red; */
+	display: flex;
+	color: #009f9f;
+	background-color: #fcd1c6;
+	width: 100%;
+	justify-content: center;
+	align-content: space-between;
+	align-items: center;
+	font-size: 35px;
+	border-style: groove;
+	border-radius: 600px/15px;
+}
+h1 {
+	/* border: 3px solid red; */
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+#bakingTimeImg {
+	border-style: groove;
+	border: none;
+	display: flex;
+	width: 150px;
+	height: 150px;
+	border-radius: 165px/35px;
+	text-transform: unset;
+}
+.submenu {
+	/* border: 3px solid red; */
+	display: inline-flex;
+	width: 100%;
+	font-family: "Lobster Two";
+	justify-content: space-between;
+	color: #005f5f;
+	font-size: 20px;
+	text-align: end;
+}
+.account {
+	/* border: 3px solid red; */
+	display: inline-flex;
+	width: 30%;
+	justify-content: space-between;
+	text-align: end;
+}
+.mainSection {
+	/* border: 3px solid red; */
+	display: flex;
+	width: 130%;
+	justify-self: space-between;
+	flex-flow: row nowrap;
+	align-content: flex-start;
+	height: 650px;
+}
+.allRecipes {
+	/* border: 3px solid red; */
+	color: lightcyan;
+	background-color: #fcd1c6;
+	width: 50%;
+	border-style: groove;
+	border-radius: 600px/15px;
+	display: flex;
+	flex-flow: row wrap;
+	overflow: auto;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-base-color: #f4ece5;
+}
+#newRecipe {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.recipes-items {
+	border: 2px solid #f4ece5;
+	background-color: #fff8e7;
+	width: 350px;
+	height: 150px;
+	display: flex;
+	align-items: flex-start;
+	font-size: 22px;
+	flex-flow: row wrap;
+	border-radius: 40px/10px;
+	font-family: "Acme";
+	color: #005f5f;
+	justify-content: space-between;
+}
+label {
+	font-weight: bold;
+}
+.recipeInfo {
+	width: 100%;
+	font-size: 15px;
+	font-family: "Acme";
+}
+.cakeImg {
+	display: flex;
+	border-style: groove;
+	width: 65px;
+	height: 65px;
+	border-radius: 125px/95px;
+	text-transform: unset;
+	background-color: #005f5f;
+}
+.icon {
+	display: flex;
+	border-style: groove;
+	width: 35px;
+	height: 35px;
+	border-radius: 125px/95px;
+	text-transform: unset;
+	background-color: #005f5f;
+}
+#main {
+	/* border: 3px solid black; */
+	display: flex;
+	margin: 5px;
+	width: 50%;
+}
+.imgC {
+	/* border: 3px solid red; */
+	display: flex;
+	width: 100%;
+}
+#mainImg {
+	/* border: 3px solid red; */
+	display: flex;
+	width: 50%;
+	width: 700px;
+	height: 650px;
+	border-radius: 20px/20px;
+	position: relative;
+	left: 200px;
+}
+
+#subImg {
+	display: flex;
+	position: relative;
+	right: 80px;
+	top: 300px;
+	width: 230px;
+	height: 210px;
+	border-radius: 180px/140px;
+}
+.footer {
+	/* border: 3px solid red; */
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+#createBtn {
+	background-color: #009f9f;
+	color: #3d7dca;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	font-family: "Acme";
+	font-size: 25px;
+	border-style: groove;
+	width: 30px;
+	height: 30px;
+	border-radius: 200px/60px;
+}

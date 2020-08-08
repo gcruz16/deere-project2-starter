@@ -1,0 +1,17 @@
+<ul class="recipe-list">
+    <% for(let i=0; i<recipe.length; i++) { %>
+    <li class="recipe-items">
+
+        <img src="<%= recipe[i].img%>" alt="" id="imgCake" class="imgCakeC cakeDiv" />
+        <a href="/recipe/<%=   recipe[i].id_recipe %>" class="imgCakesC cakeDiv"> <%=recipe[i].name_recipe%> </a>
+        <div class="recipeDiv">
+            <form action="/recipe/<%=recipe[i].id_recipe; %>?_method=DELETE" method="POST" class="icon deleteRecipe">
+                <input type="submit" name="" value="" class="submitButton icon" />
+            </form>
+        </div>
+        <div class="recipeDiv">
+            <a href="/recipe/<%=recipe[i].id_recipe; %>/edit" class="icon">Edit</a>
+        </div>
+    </li>
+    <% } %>
+</ul>

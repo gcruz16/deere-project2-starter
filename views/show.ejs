@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/showRecipe.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Baking Time</h1>
+        <img src="/img/bakingTime11.png" alt="" id="bakingTimeImg">
+    </div>
+    <p id="recipeHeader"><%= recipe.name_recipe %></p></br>
+    
+  
+    </br>
+    <img src="<%= recipe.img %>" />
+
+    <div class="mainInformation"></br></br>
+        <div class="recipeInfo"><label for="Preparation Time">Preparation Time: </label><%=recipe.preparation_time%> min
+        </div></br>
+        <div class="recipeInfo"><label for="Cooking Time">Cooking Time: </label><%=recipe.cooking_time%> min</div></br>
+        <div class="recipeInfo"><label for="Difficulty">Difficulty: </label><%=recipe.difficulty%></div></br>
+    </div>
+    </br>
+    <form action="/recipes/<%= recipe.id; %>?_method=DELETE" method="POST">
+        <input type="image" src="/icon/removeIcon.jpeg" class="icon" />
+    </form>
+    
+   
+</body>
+
+</html>

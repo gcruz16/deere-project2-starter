@@ -1,0 +1,77 @@
+body {
+	display: flex;
+	flex-flow: row wrap;
+	background-color: lightcyan;
+	font-family: "Luckiest Guy";
+	font-size: 20px;
+}
+a {
+	text-decoration: none;
+	color: #005f5f;
+	font-family: "Sniglet";
+}
+.header {
+	/* border: 3px solid red; */
+	display: flex;
+	color: #009f9f;
+	background-color: #fcd1c6;
+	width: 100%;
+	justify-content: center;
+	align-content: space-between;
+	align-items: center;
+	font-size: 35px;
+	border-style: groove;
+	border-radius: 600px/15px;
+}
+h1 {
+	/* border: 3px solid red; */
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+#bakingTimeImg {
+	border-style: groove;
+	border: none;
+	display: flex;
+	width: 150px;
+	height: 150px;
+	border-radius: 165px/35px;
+	text-transform: unset;
+}
+img {
+	display: flex;
+	width: 300px;
+	height: 300px;
+	border-radius: 260px/170px;
+}
+.icon {
+	display: flex;
+	border-style: groove;
+	width: 35px;
+	height: 35px;
+	border-radius: 125px/95px;
+	text-transform: unset;
+	background-color: #005f5f;
+}
+#recipeHeader {
+	color: #a0acac;
+	font-size: 35px;
+	width: 100%;
+}
+.mainInformation {
+	border: 4px solid #a0acac;
+	background-color: #fcd1c6;
+	width: 200px;
+	height: 200px;
+	border-radius: 200px/10px;
+	border-style: groove;
+}
+label {
+	font-weight: bold;
+}
+.recipeInfo {
+	width: 100%;
+	font-size: 20px;
+	font-family: "Acme";
+	color: #009f9f;
+}

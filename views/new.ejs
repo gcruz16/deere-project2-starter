@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/newRecipe.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
+</head>
+
+<body>
+    <div id="heading">New Recipe</div>
+    <div id="formNew">
+        <form action="/recipes" method="POST">
+            <label>Recipe : </label><input type="text" name="name_recipe" /> </br></br>
+            <label>Preparation Time:</label><input type="text" name="preparation_time" class="smallInput"/><label> minutes</label></br></br>
+            <label>Cooking Time: </label><input type="text" name="cooking_time" class="smallInput" /><label> minutes</label></br></br>
+            <label for="difficulty">Difficulty</label>
+                <select name="difficulty">
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                </select></br></br>
+            serves: <input type="text" name="serves" class="smallInput"  /></br></br>
+            img: <input type="text" name="img" /></br></br>
+            <input type="submit" name="" value="Create Recipe" class="button"/>
+        </form>
+        <img src="/img/newRecipe.jpeg" alt="">
+    </div>
+
+</body>
+
+</html>
