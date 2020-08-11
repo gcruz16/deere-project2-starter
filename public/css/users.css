@@ -1,9 +1,10 @@
 body {
-	display: flex;
+	display: grid;
 	flex-flow: row wrap;
 	background-color: lightcyan;
 	font-family: "Luckiest Guy";
 	font-size: 20px;
+	place-items: center;
 }
 a {
 	text-decoration: none;
@@ -73,41 +74,19 @@ label {
 	font-family: "Acme";
 	color: #009f9f;
 }
-form {
-	width: 100%;
+
+input {
+	height: 20px;
+	width: 250px;
+	font-family: "Nova Cut";
+	font-size: 20px;
 }
-.mainR {
-	width: 70%;
-	height: 450px;
-	display: flex;
-	flex-flow: row wrap;
-}
-.subHeader {
-	/* border: 4px solid #009f9f; */
-	width: 97%;
-	height: 100px;
-	display: flex;
+.button {
+	width: 150px;
 	justify-content: center;
-	color: #009f9f;
-	font-size: 35px;
-	background-color: #fcd1c6;
-}
-.ingredients {
-	width: 40%;
-	/* border: 4px solid #009f9f; */
-	height: 450px;
-	background-color: #ffebcd;
-	display: flex;
-	flex-flow: row wrap;
-	overflow: scroll;
-}
-.methods {
-	width: 58%;
-	/* border: 4px solid #009f9f; */
-	background-color: #ffebcd;
-	height: 450px;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-end;
-	overflow: scroll;
+	background-color: #009f9f;
+	height: 35px;
+	border-radius: 65px/55px;
+	font-size: 16px;
+	font-family: "Luckiest Guy";
 }

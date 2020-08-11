@@ -14,22 +14,30 @@
         <h1>Baking Time</h1>
         <img src="/img/bakingTime11.png" alt="" id="bakingTimeImg">
     </div>
-    <p id="recipeHeader"><%= recipe.name_recipe %></p></br>
-    
-  
-    </br>
-    <img src="<%= recipe.img %>" />
 
-    <div class="mainInformation"></br></br>
-        <div class="recipeInfo"><label for="Preparation Time">Preparation Time: </label><%=recipe.preparation_time%> min
-        </div></br>
-        <div class="recipeInfo"><label for="Cooking Time">Cooking Time: </label><%=recipe.cooking_time%> min</div></br>
-        <div class="recipeInfo"><label for="Difficulty">Difficulty: </label><%=recipe.difficulty%></div></br>
+    <div class="mainL">
+        <img src="<%= recipe.img %>" /> 
+        <div class="mainInformation"></br></br>
+            <div class="recipeInfo"><label for="Preparation Time">Preparation Time: </label><%=recipe.preparation_time%> min
+            </div></br>
+            <div class="recipeInfo"><label for="Cooking Time">Cooking Time: </label><%=recipe.cooking_time%> min</div></br>
+            <div class="recipeInfo"><label for="Difficulty">Difficulty: </label><%=recipe.difficulty%></div></br>
+        </div>
+        </br>
+        <form action="/recipes/<%= recipe.id; %>?_method=DELETE" method="POST">
+            <input type="image" src="/icon/removeIcon.jpeg" class="icon" />
+        </form>
     </div>
-    </br>
-    <form action="/recipes/<%= recipe.id; %>?_method=DELETE" method="POST">
-        <input type="image" src="/icon/removeIcon.jpeg" class="icon" />
-    </form>
+    <div class="mainR">
+         
+        <div class="subHeader">
+            <p class="subHeader"><%= recipe.name_recipe %></p>
+        </div>
+        <div class="ingredients"></div>
+        <div class="methods"></div>
+
+    </div>
+
     
    
 </body>

@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const RecipeModel = require("../models").Recipe;
+const User = require("../models").User;
+const Method = require("../models").Method;
+const Recipe_method = require("../models").Recipe_method;
 
 //put this above your show.ejs file
 router.get("/new", (req, res) => {
@@ -24,10 +27,13 @@ router.get("/:id", (req, res) => {
 	});
 });
 
-router.get("/:id/edit", (req, res) => {
-	RecipeModel.findByPk(req.params.id).then((recipe) => {
-		res.render("edit.ejs", {
-			recipe: recipe,
+router.get("/:id/edit", function (req, res) {
+	RecipeModel.findByPk(req.params.id).then((foundRecipe) => {
+		Recipe_method.findAll().then((allRecipeMethods) => {
+			res.render("edit.ejs", {
+				recipe: foundRecipe,
+				recipeMethods: allRecipeMethods,
+			});
 		});
 	});
 });

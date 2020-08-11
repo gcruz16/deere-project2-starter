@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Profile Page</title>
+      <link rel="stylesheet" href="/css/users.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" />
+      <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet" />
   </head>
 
   <body>
+    <div class="header">
+      <h1>Baking Time</h1>
+      <img src="/img/bakingTime11.png" alt="" id="bakingTimeImg" />
+    </div></br></br>
+
     <h1>Welcome to <%= user.name %>'s Profile Page</h1>
 
     <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
@@ -19,11 +27,11 @@
       Password:
       <input type="text" name="password" value="<%=user.password%>" /><br />
       <br />
-      <input type="submit" value="Edit Profile" />
+      <input type="submit" value="Edit Profile"  class ="button"/>
     </form>
     <br />
     <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
-      <input type="submit" value="Delete User" />
+      <input type="submit" value="Delete User" class ="button"/>
     </form>
 
     <br /><br />

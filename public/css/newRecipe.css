@@ -55,3 +55,25 @@ select {
 	font-size: 16px;
 	font-family: "Luckiest Guy";
 }
+.header {
+	/* border: 3px solid red; */
+	display: flex;
+	color: #009f9f;
+	background-color: #fcd1c6;
+	width: 100%;
+	justify-content: center;
+	align-content: space-between;
+	align-items: center;
+	font-size: 35px;
+	border-style: groove;
+	border-radius: 600px/15px;
+}
+#bakingTimeImg {
+	border-style: groove;
+	border: none;
+	display: flex;
+	width: 150px;
+	height: 150px;
+	border-radius: 165px/35px;
+	text-transform: unset;
+}

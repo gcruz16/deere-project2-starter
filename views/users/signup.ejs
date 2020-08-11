@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <link rel="stylesheet" href="/css/app.css" />
-  </head>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="/css/users.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-  <body>
-    <h1>Sign Up</h1>
+	<body>
+		<div class="header">
+			<h1>Baking Time</h1>
+			<img src="/img/bakingTime11.png" alt="" id="bakingTimeImg" />
+		</div></br></br>
 
-    <form action="/auth/signup" method="POST">
-      Name: <input type="text" name="name" /><br />
-      <br />
-      Username: <input type="text" name="username" /> <br />
-      <br />
-      Password: <input type="text" name="password" /><br />
-      <br />
-      <input type="submit" value="SignUp" />
-    </form>
-  </body>
+		<form action="/auth/signup" method="POST">
+			Name: <input type="text" name="name" /><br />
+			<br />
+			Username: <input type="text" name="username" /> <br />
+			<br />
+			Password: <input type="text" name="password" /><br />
+			<br />
+			<input type="submit" value="SignUp" class="button" />
+		</form>
+	</body>
 </html>
