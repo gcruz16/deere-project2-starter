@@ -3,8 +3,8 @@ const router = express.Router();
 
 const RecipeModel = require("../models").Recipe;
 const User = require("../models").User;
-const Method = require("../models").Method;
-const Recipe_method = require("../models").Recipe_method;
+const Ingredient = require("../models").Ingredient;
+const Instruction = require("../models").Instruction;
 
 //put this above your show.ejs file
 router.get("/new", (req, res) => {
@@ -29,10 +29,11 @@ router.get("/:id", (req, res) => {
 
 router.get("/:id/edit", function (req, res) {
 	RecipeModel.findByPk(req.params.id).then((foundRecipe) => {
-		Recipe_method.findAll().then((allRecipeMethods) => {
+		Ingredient.findAll().then((allIngredient) => {
+			console.log(allIngredient);
 			res.render("edit.ejs", {
 				recipe: foundRecipe,
-				recipeMethods: allRecipeMethods,
+				ingredients: allIngredient,
 			});
 		});
 	});

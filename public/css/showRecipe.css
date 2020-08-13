@@ -100,8 +100,9 @@ form {
 	display: flex;
 	flex-flow: row wrap;
 	overflow: scroll;
+	font-family: "Acme";
 }
-.methods {
+.instructions {
 	width: 58%;
 	/* border: 4px solid #009f9f; */
 	background-color: #ffebcd;

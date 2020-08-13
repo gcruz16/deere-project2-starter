@@ -36,9 +36,11 @@
             <p class="subHeader"><%= recipe.name_recipe %></p>
         </div>
         <div class="ingredients">
-            <p>recipeMethods.id_method</p>
+            <% for ( let i = 0; i < ingredients.length; i++ ) {  %>
+                <p><%=ingredients[i].ingredient_description%> </p> </br>
+            <% } %>
         </div>
-        <div class="methods"></div>
+        <div class="instructions"></div>
 
     </div>
 

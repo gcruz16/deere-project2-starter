@@ -8,30 +8,34 @@ module.exports = {
 				primaryKey: true,
 				type: Sequelize.INTEGER,
 			},
-			name_recipe: {
+			id_recipe: {
+				type: Sequelize.INTEGER,
+				autoIncrement: true,
 				allowNull: false,
-				unique: true,
+			},
+			name_recipe: {
 				type: Sequelize.STRING,
+				allowNull: false,
 			},
 			preparation_time: {
-				allowNull: false,
 				type: Sequelize.INTEGER,
+				allowNull: false,
 			},
 			cooking_time: {
-				allowNull: false,
 				type: Sequelize.INTEGER,
+				allowNull: false,
 			},
 			difficulty: {
-				allowNull: false,
 				type: Sequelize.STRING,
+				allowNull: false,
 			},
 			serves: {
-				allowNull: false,
 				type: Sequelize.INTEGER,
+				allowNull: false,
 			},
 			img: {
-				allowNull: false,
 				type: Sequelize.STRING,
+				allowNull: false,
 			},
 			createdAt: {
 				allowNull: false,

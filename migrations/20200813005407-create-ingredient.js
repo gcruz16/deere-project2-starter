@@ -8,10 +8,11 @@ module.exports = {
 				primaryKey: true,
 				type: Sequelize.INTEGER,
 			},
-			ingredient_name: {
-				allowNull: false,
-				unique: true,
-				type: Sequelize.STRING,
+			ingredient_description: {
+				type: Sequelize.TEXT,
+			},
+			id_recipe: {
+				type: Sequelize.INTEGER,
 			},
 			createdAt: {
 				allowNull: false,
