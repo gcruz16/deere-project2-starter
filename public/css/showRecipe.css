@@ -98,8 +98,12 @@ form {
 	height: 450px;
 	background-color: #ffebcd;
 	display: flex;
-	flex-flow: row wrap;
-	overflow: scroll;
+	flex-flow: column nowrap;
+	justify-content: start;
+	text-align: start;
+	overflow: auto;
+	overflow-y: scroll;
+	scrollbar-width: thin;
 	font-family: "Acme";
 }
 .instructions {
@@ -108,7 +112,10 @@ form {
 	background-color: #ffebcd;
 	height: 450px;
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-end;
-	overflow: scroll;
+	font-family: "Acme";
+	flex-flow: column nowrap;
+	justify-content: start;
+	overflow: auto;
+	overflow-y: scroll;
+	scrollbar-width: thin;
 }

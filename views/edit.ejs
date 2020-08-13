@@ -37,10 +37,14 @@
         </div>
         <div class="ingredients">
             <% for ( let i = 0; i < ingredients.length; i++ ) {  %>
-                <p><%=ingredients[i].ingredient_description%> </p> </br>
+                <div><%=ingredients[i].ingredient_description%> </div> </br>
             <% } %>
         </div>
-        <div class="instructions"></div>
+        <div class="instructions">
+            <% for ( let i = 0; i < instructions.length; i++ ) {  %>
+            <div><%=instructions[i].description%> </div> </br>
+            <% } %>
+        </div>
 
     </div>
 
