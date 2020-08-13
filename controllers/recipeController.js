@@ -21,8 +21,14 @@ router.post("/", (req, res) => {
 //Show route
 router.get("/:id", (req, res) => {
 	RecipeModel.findByPk(req.params.id).then((singleRecipe) => {
-		res.render("show.ejs", {
-			recipe: singleRecipe,
+		Ingredient.findAll().then((allIngredient) => {
+			Instruction.findAll().then((allInstructions) => {
+				res.render("show.ejs", {
+					recipe: singleRecipe,
+					ingredients: allIngredient,
+					instructions: allInstructions,
+				});
+			});
 		});
 	});
 });

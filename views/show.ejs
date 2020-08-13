@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/css/showRecipe.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Margarine&display=swap" rel="stylesheet">
+    </head>
+
 </head>
 
 <body>
@@ -28,15 +31,26 @@
             <input type="image" src="/icon/removeIcon.jpeg" class="icon" />
         </form>
     </div>
-    <div class="mainR">
-         
-        <div class="subHeader">
-            <p class="subHeader"><%= recipe.name_recipe %></p>
-        </div>
-        <div class="ingredients"></div>
-        <div class="methods"></div>
+<div class="mainR">
 
+    <div class="subHeader">
+        <p class="subHeader"><%= recipe.name_recipe %></p>
     </div>
+    <div class="ingredients">
+        <div class="submenu">Ingredients</div>
+        <% for ( let i = 0; i < ingredients.length; i++ ) {  %>
+        <div class="list-ingredients"><%=ingredients[i].ingredient_description%> </div> </br>
+        <% } %>
+    </div>
+    <div class="instructions">
+        <div class="submenu">Instructions</div>
+        <% for ( let i = 0; i < instructions.length; i++ ) {  %>
+        <div class="list-instructions"><%=instructions[i].description%> </div> </br>
+        <% } %>
+    </div>
+
+</div>
+
 
     
    

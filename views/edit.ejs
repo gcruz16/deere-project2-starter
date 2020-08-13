@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/showRecipe.css" />
+    <link rel="stylesheet" href="/css/editRecipe.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Margarine&display=swap" rel="stylesheet"></head>
 
 <body>
     <div class="header">
@@ -24,6 +26,7 @@
             <div class="recipeInfo"><label for="Cooking Time">Cooking Time: </label><%=recipe.cooking_time%> min</div>
             </br>
             <div class="recipeInfo"><label for="Difficulty">Difficulty: </label><%=recipe.difficulty%></div></br>
+            <div class="recipeInfo"><label for="Serves">Serves: </label><%=recipe.serves%></div></br>
         </div>
         </br>
         <form action="/recipes/<%= recipe.id; %>?_method=DELETE" method="POST">
@@ -35,15 +38,26 @@
         <div class="subHeader">
             <p class="subHeader"><%= recipe.name_recipe %></p>
         </div>
-        <div class="ingredients">
+        <div class="ingredients"> 
+            <div class="submenu">Ingredients</div>
+            <div class="list-ingredients">
             <% for ( let i = 0; i < ingredients.length; i++ ) {  %>
-                <div><%=ingredients[i].ingredient_description%> </div> </br>
+                <textarea  name="ingredients" rows="1" cols="40">
+                    <%=ingredients[i].ingredient_description%>
+               </textarea>
             <% } %>
+            </div>
         </div>
+        
         <div class="instructions">
+            <div class="submenu">Instructions</div>
+            <div class="list-instructions">
             <% for ( let i = 0; i < instructions.length; i++ ) {  %>
-            <div><%=instructions[i].description%> </div> </br>
+                <textarea  name="instructions" rows="5" cols="100">
+                        <%=instructions[i].description%> 
+                </textarea>
             <% } %>
+            </div>
         </div>
 
     </div>
