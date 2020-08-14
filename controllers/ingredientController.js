@@ -6,16 +6,15 @@ const User = require("../models").User;
 const Ingredient = require("../models").Ingredient;
 const Instruction = require("../models").Instruction;
 
-//put this above your show.ejs file
+//new ingredient route
 router.get("/new", (req, res) => {
-	res.render("new.ejs");
+	res.render("new_ingredient.ejs");
 });
 
 //Route for a new recipe
 router.post("/", (req, res) => {
 	RecipeModel.create(req.body).then((newRecipe) => {
-		// res.redirect(`/recipes/${newRecipe.id}`);
-		res.redirect(`/`);
+		res.redirect(`/recipes/${newRecipe.id}`);
 	});
 });
 

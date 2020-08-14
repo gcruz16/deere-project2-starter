@@ -23,9 +23,7 @@
             <form class="recipeInfo"  action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
                 Preparation Time: <input class="recipe-list" type="text" name="preparation_time" value="<%=recipe.preparation_time%>" />
                 Cooking Time: <input class="recipe-list"  type="text" name="cooking_time" value="<%=recipe.cooking_time%>" />
-                Difficulty:<select class="recipe-list"  name="difficulty">
-                    <option value="<%=recipe.id%>" selected><%=recipe.difficulty%>
-                </select>
+                
                 Serves : <input  class="recipe-list"  type="text" name="serves" value="<%=recipe.serves%>" />
                 <input type="submit" name="" value="Submit Changes" class="button" />
         </form>

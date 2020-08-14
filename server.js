@@ -5,6 +5,8 @@ const methodOverride = require("method-override");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const RecipeModel = require("./models").Recipe;
+// const Ingredient = require("../models").Ingredient;
+// const Instruction = require("../models").Instruction;
 
 const verifyToken = (req, res, next) => {
 	let token = req.cookies.jwt;
@@ -49,6 +51,8 @@ app.use("/auth", require("./controllers/authController.js"));
 // app.use("/users", require("./controllers/usersController.js"));
 app.use("/users", verifyToken, require("./controllers/usersController.js"));
 app.use("/recipes", require("./controllers/recipeController.js"));
+// app.use("/ingredients", require("./controllers/ingredientController.js"));
+// app.use("/instructions", require("./controllers/instructionController.js"));
 
 app.listen(process.env.PORT, () => {
 	console.log("Nodemon listening");
