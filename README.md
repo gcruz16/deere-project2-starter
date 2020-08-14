@@ -45,66 +45,50 @@ Four tables were created for this app:
 
 ### MVP/PostMVP 
 
-#MVP
+# MVP
 
-- As a User IRender data on page
-- List all receipts to the users
-- Allow user to create his/her account
-- Allow user to edit his/her account
-- Allow user to sign out
-- Allow user to create new receipts
-- Allow user to copy receipts to his/her account
-- Allow user to delete receipts to his/her account
-- Allow user to edit a receipt from his account
+- As a user I need to see the list of all recipes in the index page so I can decide which recipe I want to check
+- As a user I need an option to signUp 
+- As a user I need an option to create an account 
+- As a user I need an option to edit my profile
+- As a user I need an option to remove recipes from edit recipe option and from index page.
+- As a user I need an option to add a new recipe.
+- As a user I need an option to display the recipe, including cooking time,preparation time, serves, difficulty, ingredients and instructions.
+- As I user I need an option to edit recipes
+- As I user I need app display images for each recipe 
+- As I user I need app display scrollbar for ingredients and instructions
+
+
+# PostMVP
+- As a user I need an option to save my favorities recipes
+- As a user I want to see infromation nutritional for each recipe
 - Do not allow to see a detail of a receipt if user hasn´t been logged in yet
+- As I user I need a search option for recipes so I can find out these quickly
 
-#PostMVP
 
-#### PostMVP EXAMPLE
+## Technologies used
 
-- Add localStorage or firebase for storage
+* **Visual Studio Code:** used for coding with HTML-5, CSS and Javascript, Express
+* [Diagrams](https://app.diagrams.net/)  used for building the wireframe
+* **Google Chrome Web Browser:** used for launching the website
+* **Postgress:** used for tables
 
-## Components
 
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
+## Dependencies
 
-| Component |                          Description                          |
-| --------- | :-----------------------------------------------------------: |
-| App       | This will make the initial data pull and include React Router |
-| Header    |          This will render the header include the nav          |
-| Footer    |          This will render the header include the nav          |
+    - "bcryptjs": "^2.4.3",
+    - "cookie-parser": "^1.4.5",
+    - "dotenv": "^8.2.0",
+    - "ejs": "^3.1.3",
+    - "express": "^4.17.1",
+    - "jsonwebtoken": "^8.5.1",
+    - "method-override": "^3.0.0",
+    - "pg": "^8.3.0",
+    - "sequelize": "^6.3.4",
+    - "sequelize-cli": "^6.2.0"
 
-## Time Frames
 
-Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-| Component        | Priority | Estimated Time | Time Invetsted | Actual Time |
-| ---------------- | :------: | :------------: | :------------: | :---------: |
-| Adding Form      |    H     |      3hrs      |     3.5hrs     |   3.5hrs    |
-| Working with API |    H     |      3hrs      |     2.5hrs     |   2.5hrs    |
-| Total            |    H     |      6hrs      |      5hrs      |    5hrs     |
 
-## Additional Libraries
 
-Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc.
-
-## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
-
-## Issues and Resolutions
-
-Use this section to list of all major issues encountered and their resolution.
-
-#### SAMPLE.....
-
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier  
-**RESOLUTION**: Missing comma after first object in sources {} object
