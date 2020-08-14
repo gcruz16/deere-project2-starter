@@ -21,15 +21,19 @@ router.post("/", (req, res) => {
 //Show route
 router.get("/:id", (req, res) => {
 	RecipeModel.findByPk(req.params.id).then((singleRecipe) => {
-		Ingredient.findAll().then((allIngredient) => {
-			Instruction.findAll().then((allInstructions) => {
-				res.render("show.ejs", {
-					recipe: singleRecipe,
-					ingredients: allIngredient,
-					instructions: allInstructions,
-				});
-			});
-		});
+		Ingredient.findAll({ where: { id_recipe: req.params.id } }).then(
+			(allIngredient) => {
+				Instruction.findAll({ where: { id_recipe: req.params.id } }).then(
+					(allInstructions) => {
+						res.render("show.ejs", {
+							recipe: singleRecipe,
+							ingredients: allIngredient,
+							instructions: allInstructions,
+						});
+					}
+				);
+			}
+		);
 	});
 });
 
