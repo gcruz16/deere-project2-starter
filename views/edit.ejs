@@ -19,14 +19,18 @@
 
     <div class="mainL">
         <img src="<%= recipe.img %>" />
-        <div class="mainInformation"></br></br>
-            <div class="recipeInfo"><label for="Preparation Time">Preparation Time: </label><%=recipe.preparation_time%>
-                min
-            </div></br>
-            <div class="recipeInfo"><label for="Cooking Time">Cooking Time: </label><%=recipe.cooking_time%> min</div>
-            </br>
-            <div class="recipeInfo"><label for="Difficulty">Difficulty: </label><%=recipe.difficulty%></div></br>
-            <div class="recipeInfo"><label for="Serves">Serves: </label><%=recipe.serves%></div></br>
+        <div class="mainInformation">
+            <form class="recipeInfo"  action="/recipes/<%=recipe.id%>?_method=PUT" method="POST">
+                Preparation Time: <input class="recipe-list" type="text" name="preparation_time" value="<%=recipe.preparation_time%>" />
+                Cooking Time: <input class="recipe-list"  type="text" name="cooking_time" value="<%=recipe.cooking_time%>" />
+                Difficulty:<select class="recipe-list"  name="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                Serves : <input  class="recipe-list"  type="text" name="serves" value="<%=recipe.serves%>" />
+                <input type="submit" name="" value="Submit Changes" class="button" />
+        </form>
         </div>
         </br>
         <form action="/recipes/<%= recipe.id; %>?_method=DELETE" method="POST">
@@ -38,23 +42,26 @@
         <div class="subHeader">
             <p class="subHeader"><%= recipe.name_recipe %></p>
         </div>
-        <div class="ingredients"> 
-            <div class="submenu">Ingredients</div>
-            <div class="list-ingredients">
-            <% for ( let i = 0; i < ingredients.length; i++ ) {  %>
-                <textarea  name="ingredients" rows="1" cols="40">
-                    <%=ingredients[i].ingredient_description%>
-               </textarea>
-            <% } %>
+        <form action="/ingredient/<%=ingredients.id%>?_method=PUT" method="POST"></form>
+                    
+            <div class="ingredients"> 
+                <div class="submenu">Ingredients</div>
+                    <div id="ingredientChanges"><input type="submit" name="" value="Submit Changes" class="button" /></div>
+                <% for ( let i = 0; i < ingredients.length; i++ ) {  %>
+                    <input class="ingredient-item" id="qty" type="text" name="qty" value="<%=ingredients[i].qty%>" />
+                    <input class="ingredient-item" id="uom" type="text" name="unit_of_measure" value="<%=ingredients[i].unit_of_measure%>" />
+                    <textarea  name="ingredient-item" rows="1" cols="27"><%=ingredients[i].ingredient_description%>
+                    </textarea>
+                <% } %>
             </div>
-        </div>
+
+        </form>
         
         <div class="instructions">
             <div class="submenu">Instructions</div>
             <div class="list-instructions">
             <% for ( let i = 0; i < instructions.length; i++ ) {  %>
-                <textarea  name="instructions" rows="5" cols="100">
-                        <%=instructions[i].description%> 
+                <textarea  name="instructions" rows="5" cols="100"><%=instructions[i].description%> 
                 </textarea>
             <% } %>
             </div>

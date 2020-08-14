@@ -48,6 +48,51 @@ module.exports = {
 				img:
 					"https://iambaker.net/wp-content/uploads/2016/04/rosette-cake-sice-300x300.jpg",
 			},
+			{
+				name_recipe: "Apple Pie",
+				preparation_time: 30,
+				cooking_time: 40,
+				difficulty: "Easy",
+				serves: 8,
+				img:
+					"https://lexiscleankitchen.com/wp-content/uploads/2018/07/Paleo-Apple-Pie.jpg",
+			},
+			{
+				name_recipe: "Banana Cream Pie",
+				preparation_time: 30,
+				cooking_time: 40,
+				difficulty: "Easy",
+				serves: 10,
+				img:
+					"https://cdn.sallysbakingaddiction.com/wp-content/uploads/2016/07/Banana-Cream-Pie-8.jpg",
+			},
+			{
+				name_recipe: "Cupcakes",
+				preparation_time: 15,
+				cooking_time: 40,
+				difficulty: "Easy",
+				serves: 17,
+				img:
+					"https://cdn.sallysbakingaddiction.com/wp-content/uploads/2019/05/yellow-birthday-cupcakes-chocolate-frosting.jpg",
+			},
+			{
+				name_recipe: "Bunny Cookies",
+				preparation_time: 15,
+				cooking_time: 40,
+				difficulty: "Medium",
+				serves: 15,
+				img:
+					"https://cdn.sallysbakingaddiction.com/wp-content/uploads/2020/04/peeps-easter-bunny-sugar-cookies.jpg",
+			},
+			{
+				name_recipe: "Chocolate cookies",
+				preparation_time: 35,
+				cooking_time: 40,
+				difficulty: "Medium",
+				serves: 15,
+				img:
+					"https://cdn.sallysbakingaddiction.com/wp-content/uploads/2013/04/inside-out-chocolate-chip-cookies-4-1.jpg",
+			},
 		]);
 	},
 

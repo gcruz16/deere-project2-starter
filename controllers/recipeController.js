@@ -49,6 +49,7 @@ router.get("/:id/edit", function (req, res) {
 
 //Edit Recipe (button)
 router.put("/:id", (req, res) => {
+	console.log("edit option");
 	RecipeModel.update(req.body, { where: { id: req.params.id } }).then(
 		(updatedRecipe) => {
 			console.log(updatedRecipe);

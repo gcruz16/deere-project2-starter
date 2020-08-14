@@ -77,3 +77,9 @@ select {
 	border-radius: 165px/35px;
 	text-transform: unset;
 }
+
+a {
+	text-decoration: none;
+	color: #005f5f;
+	font-family: "Sniglet";
+}

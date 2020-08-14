@@ -10,9 +10,19 @@ module.exports = {
 			},
 			ingredient_description: {
 				type: Sequelize.TEXT,
+				allowNull: false,
+			},
+			qty: {
+				allowNull: false,
+				type: Sequelize.INTEGER,
+			},
+			unit_of_measure: {
+				allowNull: false,
+				type: Sequelize.STRING,
 			},
 			id_recipe: {
 				type: Sequelize.INTEGER,
+				allowNull: false,
 			},
 			createdAt: {
 				allowNull: false,

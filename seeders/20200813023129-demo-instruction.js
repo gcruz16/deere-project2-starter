@@ -49,24 +49,49 @@ module.exports = {
 				id_recipe: 1,
 			},
 			{
-				description: "Step1",
-				id_recipe: 1,
+				description:
+					"Preheat oven to 350°. Line the bottoms of 2 greased 8-in. round baking pans with parchment; grease parchment.",
+				id_recipe: 2,
 			},
 			{
-				description: "Step2",
-				id_recipe: 1,
+				description:
+					"In a large bowl, combine cake mix, gelatin, sugar and flour. Add water, oil and eggs; beat on low speed 30 seconds. Beat on medium 2 minutes. Fold in chopped strawberries. Transfer to prepared pans",
+				id_recipe: 2,
 			},
 			{
-				description: "Step3",
-				id_recipe: 1,
+				description:
+					"Bake until a toothpick inserted in center comes out clean, 25-30 minutes. Cool in pans 10 minutes before removing to wire racks; remove paper. Cool completely.",
+				id_recipe: 2,
 			},
 			{
-				description: "Step4",
-				id_recipe: 1,
+				description:
+					"For frosting, in a small bowl, beat butter until creamy. Beat in crushed strawberries. Gradually beat in enough confectioners’ sugar to reach desired consistency. Spread frosting between layers and over top and sides of cake.",
+				id_recipe: 2,
 			},
 			{
-				description: "Step5",
-				id_recipe: 1,
+				description:
+					"Preheat the oven to 350˚F (180˚C). Grease 3 8-inch (20 cm) round cake pans and line with parchment paper.",
+				id_recipe: 3,
+			},
+			{
+				description:
+					"Grate the carrots on the small holes of a box grater. Set aside.",
+				id_recipe: 3,
+			},
+			{
+				description:
+					"In a large bowl, sift together 2½ cups (310 G) of flour, the cinnamon, allspice, salt, baking powder, and baking soda. Whisk together.",
+				id_recipe: 3,
+			},
+			{
+				description:
+					"In a separate large bowl, beat the brown sugar, granulated sugar, and eggs together with an electric hand mixer on medium speed until just combined.",
+				id_recipe: 3,
+			},
+			{
+				description:
+					"With the mixer running, gradually pour in the vegetable oil.",
+				id_recipe: 3,
 			},
 		]);
 	},
