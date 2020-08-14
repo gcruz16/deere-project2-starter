@@ -60,8 +60,15 @@ router.put("/:id", (req, res) => {
 	console.log("edit option");
 	RecipeModel.update(req.body, { where: { id: req.params.id } }).then(
 		(updatedRecipe) => {
-			console.log(updatedRecipe);
-			res.redirect("/");
+			Ingredient.update(req.body, { where: { id: req.params.id } }).then(
+				(foundIngredient) => {
+					Instruction.update(req.body, { where: { id: req.params.id } }).then(
+						(foundInstruction) => {
+							res.redirect("/");
+						}
+					);
+				}
+			);
 		}
 	);
 });

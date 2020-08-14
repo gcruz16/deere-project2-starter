@@ -176,9 +176,13 @@ form {
 }
 #uom {
 	display: flex;
-	width: 26%;
+	width: 27%;
 	justify-content: center;
 	text-align: left;
+}
+form {
+	display: flex;
+	flex-flow: row wrap;
 }
 .list-instructions {
 	display: flex;

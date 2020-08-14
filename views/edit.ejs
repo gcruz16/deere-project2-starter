@@ -24,9 +24,7 @@
                 Preparation Time: <input class="recipe-list" type="text" name="preparation_time" value="<%=recipe.preparation_time%>" />
                 Cooking Time: <input class="recipe-list"  type="text" name="cooking_time" value="<%=recipe.cooking_time%>" />
                 Difficulty:<select class="recipe-list"  name="difficulty">
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
+                    <option value="<%=recipe.id%>" selected><%=recipe.difficulty%>
                 </select>
                 Serves : <input  class="recipe-list"  type="text" name="serves" value="<%=recipe.serves%>" />
                 <input type="submit" name="" value="Submit Changes" class="button" />
@@ -42,20 +40,21 @@
         <div class="subHeader">
             <p class="subHeader"><%= recipe.name_recipe %></p>
         </div>
-        <form action="/ingredient/<%=ingredients.id%>?_method=PUT" method="POST"></form>
                     
             <div class="ingredients"> 
                 <div class="submenu">Ingredients</div>
+                <form action="/ingredient/<%=ingredients.id%>?_method=PUT" method="POST">
                     <div id="ingredientChanges"><input type="submit" name="" value="Submit Changes" class="button" /></div>
                 <% for ( let i = 0; i < ingredients.length; i++ ) {  %>
                     <input class="ingredient-item" id="qty" type="text" name="qty" value="<%=ingredients[i].qty%>" />
                     <input class="ingredient-item" id="uom" type="text" name="unit_of_measure" value="<%=ingredients[i].unit_of_measure%>" />
-                    <textarea  name="ingredient-item" rows="1" cols="27"><%=ingredients[i].ingredient_description%>
+                    <textarea  name="ingredient-item" rows="1" cols="25"><%=ingredients[i].ingredient_description%>
                     </textarea>
                 <% } %>
+                </form>
             </div>
 
-        </form>
+     
         
         <div class="instructions">
             <div class="submenu">Instructions</div>
