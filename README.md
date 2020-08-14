@@ -1,28 +1,53 @@
-## Project Overview: Baking Time
+# Project Overview: Baking Time
+![](https://github.com/gcruz16/deere-project2-starter/blob/master/public/img/wireframe_HomePage.png)
 
 ## Project Description
 
-In this site you will find out baking recipes, you will be able to see preparation time, cooking time , difficulty and serves besides of ingredients and instructions to follow up.
+Baking Time is an app to display a list of baking recipes, from the index page you will be able to see the complete list with a brief information. App allows you to edit each recipe, to show the detail of the recipes , to create new recipes and delete the ewxisting ones.
+
+Developer: Gladys Cruz
 
 ## Project Links
 
-- [github repo]()
+- [github repo](https://github.com/gcruz16/deere-project2-starter)
 - [deployment]()
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
+Four tables were created for this app: 
+- Users
+- Recipes
+- Ingredients
+- Instructions
 
-- [wireframes]()
+## ER Diagram
+- ![wireframes](https://github.com/gcruz16/deere-project2-starter/blob/master/public/img/ER.png)
 - [react architecture]()
 
-Define the the React components and the architectural design of your app.
+#### Home Page
+![](https://github.com/gcruz16/deere-project2-starter/blob/master/public/img/wireframe_HomePage.png)
 
-### MVP/PostMVP - 5min
+#### SignUp  Page
+![](https://github.com/gcruz16/deere-project2-starter/blob/master/public/img/signUpPage.png)
+
+#### Profile Page
+![](https://github.com/gcruz16/deere-project2-starter/blob/master/public/img/profilePage.png)
+
+#### New Recipe Page
+![](https://github.com/gcruz16/deere-project2-starter/blob/master/public/img/newRecipe.png)
+
+#### Edit Recipe Page
+![](https://github.com/gcruz16/deere-project2-starter/blob/master/public/img/editRecipe.png)
+
+#### Show Recipe Page
+![](https://github.com/gcruz16/deere-project2-starter/blob/master/public/img/showRecipe.png)
+
+
+### MVP/PostMVP 
 
 #MVP
 
-- Render data on page
+- As a User IRender data on page
 - List all receipts to the users
 - Allow user to create his/her account
 - Allow user to edit his/her account
