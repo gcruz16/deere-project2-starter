@@ -21,7 +21,7 @@ router.put("/profile/:id", (req, res) => {
 		returning: true,
 	}).then((userProfile) => {
 		//redirect to the index page
-		res.redirect(`/users/profile/${userProfile.id}`);
+		res.redirect(`/users/profile/${req.params.id}`);
 	});
 });
 
