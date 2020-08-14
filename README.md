@@ -2,7 +2,7 @@
 
 ## Project Description
 
-In this site you will find out baking recipes, you will be able to see preparation time, cooking time , difficulty and serves besides of ingredients , nutrition information and method to follow.
+In this site you will find out baking recipes, you will be able to see preparation time, cooking time , difficulty and serves besides of ingredients and instructions to follow up.
 
 ## Project Links
 

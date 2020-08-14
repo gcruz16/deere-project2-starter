@@ -35,15 +35,19 @@ router.get("/:id", (req, res) => {
 
 router.get("/:id/edit", function (req, res) {
 	RecipeModel.findByPk(req.params.id).then((foundRecipe) => {
-		Ingredient.findAll().then((allIngredient) => {
-			Instruction.findAll().then((allInstructions) => {
-				res.render("edit.ejs", {
-					recipe: foundRecipe,
-					ingredients: allIngredient,
-					instructions: allInstructions,
-				});
-			});
-		});
+		Ingredient.findAll({ where: { id_recipe: req.params.id } }).then(
+			(allIngredient) => {
+				Instruction.findAll({ where: { id_recipe: req.params.id } }).then(
+					(allInstructions) => {
+						res.render("edit.ejs", {
+							recipe: foundRecipe,
+							ingredients: allIngredient,
+							instructions: allInstructions,
+						});
+					}
+				);
+			}
+		);
 	});
 });
 
